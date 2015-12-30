@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Numerical Integration - Trapezoid Rule</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<h1>Numerical Integration</h1>
+		<h2>Trapezoidal Rule and Left/Right Endpoint Approximation</h2>
+		<p>Equation: e<sup>x<sup>2</sup></sup></p>
+		<form id="parameters">
+			<legend>Parameters</legend>
+			<ul id="parameter-list">
+				<li><label for="intA">a: </label><input type="text" id="intA" value="0" /></li>
+				<li><label for="intB">b: </label><input type="text" id="intB" value="1" /></li>
+				<li><label for="count">n: </label><input type="text" id="count" value="100" /></li>
+				<li><label for="algo">Algorithm:</label><select id="algo"><option>Trapezoidal Rule</option><option>Left Endpoint</option><option>Right Endpoint</option></select></li>
+				<li><input type="button" id="compute" value="Compute"></li>
+			</ul>
+		</form>
+		<p><em>a</em> is the lower limit, while <em>b</em> is the upper limit of the integral.<br/>
+		<em>n</em> denotes the number of intervals to divide the area under the equation's curve into.</p>
+		<p>FYI: As <em>n</em> increases, so does the accuracy. (i.e. a lower % error)</p>
+		<table id="results">
+			<thead id="results-head">
+				<tr>
+					<td>n</td>
+					<td>T<sub>n</sub></td>
+					<!--<td>% error</td>-->
+				</tr>
+			</thead>
+			<tbody id="results-rows">
+			</tbody>
+		</table>
+	</body>
+</html>
